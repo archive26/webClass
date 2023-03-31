@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예약페이지</title>
+</head>
+<body>
+    <form action="#" method="get">
+            <div>
+                <h3>예약자정보를 입력해주세요</h3>
+                <label for="reser_name">예약자 성명</label>
+                <input type="text" id="reser_name" placeholder="이름" required>
+                <p>
+                    <label for="reser_birth">생년월일</label>
+                    <input type="number" id="reser_birth" placeholder="8자리 숫자만 입력해주세요" required>   
+                </p>
+                <p>
+                    <label for="reser_tel">예약자 연락처</label>
+                    <input type="text" id="reser_tel" placeholder="예시)010-1111-1111" required>
+                </p>
+                <p>
+                    <label>내원기록</label>
+                    <label for="first_treatment">초진</label>
+                    <input type="radio" id="first_treatment" name="treatment">
+                    <label for="jeajin">재진</label>
+                    <input type="radio" id="jeajin" name="treatment">   
+                </p>
+                <p>
+                    <label for="reser_desc">예약내용</label>
+                    <textarea id="reser_desc" placeholder="아프신 부위 및 증상을 남겨주세요.예약내용을 남겨주시면 연락처로 상담전화를 드립니다."></textarea>
+                </p>
+                <p>
+                    <input type="checkbox" id="reser_agree" required>
+                    <label for="reser_agree">개인정보수집동의</label>
+                </p>
+                <p>
+                    <input type="submit" value="온라인예약 신청하기">
+                    <input type="reset" value="취소">   
+                </p>
+               </div>
+        </form>
+</body>
+</html>
