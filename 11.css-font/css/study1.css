@@ -7,6 +7,7 @@ h1{font-size:5rem;}
 em - 부모태그에 적용된 글씨 크기
 */
 .b{font-weight:600;}
+/* .b{font-weight:bold;} 로도 쓸 수 있다.*/
 /* 
 키워드방식-normal(기본값)/lighter(얇게)/bold(두껍게)
 수치입력방식 -100~900까지 100단위로
@@ -40,9 +41,10 @@ none(기본값)/ underline(밑줄)/linethrough(취소선)
 */
 .h{letter-spacing:1rem;}
 .i{word-spacing:20px ;}
+/* .i{word-spacing: 1.5em ;}로도 사용할 수 있음 */
 .j{word-break:break-all;}
 .k{white-space:nowrap;}
-/* normal(기본값)/ nowrap(줄바꿈허용x) */
+/* normal(기본값)/ nowrap(줄바꿈허용x) /white space:공백*/ 
 .l{text-align:justify;}
 /* 
 left(기본값)/right/center/justify(양쪽정렬-왼쪽과 오른쪽 가장자리 라인에
