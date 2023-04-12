@@ -22,7 +22,8 @@ em - 부모태그에 적용된 글씨 크기
     font-size: 20px;
     line-height:3.2;
 }
-/* line-height 글씨를 감싸는 보이지 않는 라인의 높이를 의미하며, 기본적으로 글씨의 크기에 비례하여 120% 비율로 설정되어있다. %단위는 단위없이 정수로 소수점과 함께 사용하여 표현할 수 있다.
+/* line-height 글씨를 감싸는 보이지 않는 라인의 높이를 의미하며, 
+기본적으로 글씨의 크기에 비례하여 120% 비율로 설정되어있다. %단위는 단위없이 정수로 소수점과 함께 사용하여 표현할 수 있다.
 232% -> 2.32
 */
 .e{font-family:dotum,"돋움",sans-serif;}
@@ -47,8 +48,8 @@ none(기본값)/ underline(밑줄)/linethrough(취소선)
 /* normal(기본값)/ nowrap(줄바꿈허용x) /white space:공백*/ 
 .l{text-align:justify;}
 /* 
-left(기본값)/right/center/justify(양쪽정렬-왼쪽과 오른쪽 가장자리 라인에
-텍스트를 맞추는 것을 우선적으로 처리함)
+left(기본값)/right/center/justify(양쪽정렬-왼쪽과 오른쪽 가장자리
+ 라인에 텍스트를 맞추는 것을 우선적으로 처리함)
 */
 .m{text-transform: capitalize;}
 /* 

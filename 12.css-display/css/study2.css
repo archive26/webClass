@@ -17,3 +17,9 @@ h2{border: 1px solid blue;}
     width: 500px;
     box-sizing: border-box;
 }
+.box3{
+    width: 300px;
+}
+.box3>h3{
+    border: 1px solid red;
+}
