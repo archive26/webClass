@@ -1,0 +1,41 @@
+/* reset */
+*{margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight: normal;}    
+a{text-decoration:none; color:inherit; }
+strong,b{font-weight: normal;}
+i,em,address{font-style: normal;}
+
+/* common-style (상속스타일) */
+html{
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* layout (크기,배치) */
+.container{
+    width:980px;
+    margin:0 auto;
+    font-size: 22px;
+}
+.container h1{
+    font-weight:700;
+    margin-bottom: 35px;
+    margin-top: 40px;
+}
+.container p{
+    margin-bottom: 35px;
+}
+.container .mb100{
+    margin-bottom: 100px;
+}
+.container .sign{
+   margin:70px 0 35px;
+   font-size: 30px;
+   font-family:"풀무원 폰트";
+}
+   
+@font-face {
+    font-family:"풀무원 폰트" ;
+    src: url(../예제1/font/PulmuoneLOHASBold.woff);
+}
+
