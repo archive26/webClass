@@ -1,0 +1,62 @@
+/* common  */
+html{
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* layout */
+.banner{
+    height: 250px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+.container{
+    width: 1200px;
+    /* height: auto; 추가 컨텐츠 들어갈 수도 있으니까 설정해두기.
+    안 적어도됨 자동으로 되어있음.*/
+    margin:0 auto;
+}
+.container > h2{
+    font-size: 30px;
+    font-weight: bold;
+    background: url(../../img/sub_tit_line.gif) repeat-x 0 50%;
+    margin-bottom: 100px;
+}
+.container > h2 > span{
+    background: #ffffff;
+    padding-right: 18px;
+}
+.container > h3{
+    font-size: 52px;
+    font-family:"풀무원체";
+    text-align: center;
+    padding:0 70px;
+    margin-bottom:50px;
+}
+.container > h3 >span{
+    color: #7EAE4B;
+}
+.container section{
+    width: 810px;
+    padding:40px 90px 50px;
+    /* 또는 시계방향으로 작성하기 */
+    background: blue;
+    margin:0 auto;
+    box-sizing: border-box;
+    background: #F4F4F4;
+    text-align: center;
+}
+.container >section > h4{
+    font-family: "풀무원체";
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+.container >section > h4+p{
+    margin-bottom: 30px;
+}
+
+
+@font-face{
+    font-family: "풀무원체";
+    src: url(../font/PulmuoneLOHASBold.woff);
+}
