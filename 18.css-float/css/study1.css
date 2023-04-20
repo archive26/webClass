@@ -24,12 +24,16 @@
     background: green;
     float: right;
 }
+/* .clear{
+     clear:both;
+     background:lime;
+    }
+문맥고려 해야하므로 이 태그 대신에 가상태그인 after태그를 이용해서 만들 것 */
 .parent:after{
     content: "";
     display: block;
     clear: both;
 }
-/* .clear{clear:both; background:lime;} */
 .nextP{
     border: 5px solid gold;
 }
