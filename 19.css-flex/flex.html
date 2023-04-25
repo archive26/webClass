@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        *{margin:0;padding:0;}
+        .box{
+            border:1px solid red;
+            display: flex;
+            width:920px;
+            margin:0 auto;
+            flex-wrap:wrap;
+
+        }
+        .box>section{
+            border:1px solid blue;
+            width:300px;
+            margin-right: 10px;
+            box-sizing: border-box;
+        }
+        .box>section:nth-of-type(3n){margin-right:0;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <section>1</section>
+        <section>2</section>
+        <section>
+            <h3>title3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi laborum amet aperiam cumque itaque cum ea, nisi non aspernatur nemo odio officiis iure placeat. Excepturi repellat nam cum? Atque, sequi!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi laborum amet aperiam cumque itaque cum ea, nisi non aspernatur nemo odio officiis iure placeat. Excepturi repellat nam cum? Atque, sequi!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi laborum amet aperiam cumque itaque cum ea, nisi non aspernatur nemo odio officiis iure placeat. Excepturi repellat nam cum? Atque, sequi!</p>
+        </section>
+        <section>4</section>
+        <section>5</section>
+    </div>
+</body>
+</html>
