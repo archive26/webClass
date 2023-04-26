@@ -3,6 +3,7 @@
     width: 500px;
     height: 500px;
     object-fit:cover;
+    object-position: right;
 }
 figure{
     border: 10px solid red;
@@ -13,9 +14,11 @@ figure>img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0% 50%;
+    /* object-position: 0% 50%; */
     transition:all 1s ease 0s;
 }
 figure:hover img{
+ width: 50%;   
+ height:50%;
  object-position: 100% 50%;
 }

@@ -6,9 +6,16 @@
     margin:0 auto;
     margin-top:100px;
     box-shadow:
-    10px -30px 10px blue,
-    10px 30px 0 red,
-    -10px 50px 0 green;
+    0px 0px 0 blue,
+    0px 0px 0 red,
+    0px 0px 0 rgb(94, 180, 94);
     /* box-shadow:(x좌표) (y좌표) (확산정도) (색상) */
     text-shadow:2px 2px 4px rgb(192, 228, 35); 
+    transition:all 0.5s ease 0s;
+}
+.box:hover{
+    box-shadow:
+    10px -30px 10px rgb(128, 128, 221),
+    10px 30px 0 tomato,
+    -10px 50px 0 rgb(206, 243, 206);
 }
