@@ -4,7 +4,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight:normal; }
 address,em,i{font-style:normal;}
 strong,b{font-weight:normal;}
 a{text-decoration:none;color: inherit;}
-ul,ol{list-style: none;;}
+ul,ol{list-style: none;}
 
 /* 2.common - style */
 html{
