@@ -1,0 +1,105 @@
+*{margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight: normal;}    
+a{text-decoration:none; color:inherit; }
+strong,b{font-weight: normal;}
+i,em,address{font-style: normal;}
+ul,ol{list-style:none;}
+
+html{
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.contents_wrap{
+    margin:0 auto;
+}
+/* header */
+header{ position: fixed;
+    left:0;top:0;
+    width:100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100px;
+    font-weight:bold;
+    color: white;
+}
+.logoArea img{
+    border: 1PX solid blue;
+    width: 200px;
+    
+}
+.gnb>ul{
+    display: flex;
+    border: 1px solid green;
+    justify-content: center;
+    align-items:flex-start
+}
+.gnb>ul>li{
+    margin-right: 80px;
+}
+.gnb>ul>li>.a{overflow: hidden;}
+.gnb .a:hover{}
+.langList>ul{
+    border: 1px solid blue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+}
+/* main */
+.videoBanner{
+    width: 100%;
+    border: 1px solid red;
+    object-fit: cover;
+    position: relative;
+    z-index: -10;
+}
+.videoBanner>a{position: absolute;
+    top:calc(100% - 40%);right:calc(100% - 50%);
+    color: white;
+    background: gray;
+}
+.img{
+    position: absolute;
+    top:calc(100% - 60%);right:calc(100% - 60%);
+}
+.news{
+    display: flex;
+    justify-content: flex-start;
+} 
+.news>h3{ 
+    border: 1px solid red;
+    margin-left:40px;
+    height: 30px;
+}
+.b{
+    border: 1px solid blue;
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+    margin-left:-42px;
+}
+.b>li{
+    margin-right: 50px;
+    margin:0 auto;
+}
+.culture>ul{
+    display: flex;
+    border: 1px solid red;
+    width: 100%;
+    margin:0 auto;
+}
+.notice>ul{display: flex;}
+
+/* footer */
+.footMenu1>ul{display: flex;}
+.footMenu2>ul{display: flex;}
+.footLogo{display: flex;}
+
+.snsMenu{
+    display: flex;
+    border: 1px solid red;
+    justify-content: flex-end;
+}

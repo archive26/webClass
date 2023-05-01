@@ -1,0 +1,56 @@
+*{margin:0;padding:0;}
+body{margin-bottom: 500px;}
+.boxa{
+    border: 1px solid red;
+    width:200px;
+    height:200px;
+    margin:50px auto;
+}
+@keyframes jyRotate{
+    0%{transform:rotate(0deg);}
+    25%{border-radius:20%;}
+    50%{background: red;}
+    100%{transform:rotate(360deg);}
+}
+.boxa{
+
+    /* animation-name:jyRotate; 
+    animation-duration:1s;
+    animation: timing-function:linear;
+    animation-delay:0s;
+    animation-iteration-count:4;
+    animation-direction:alternate;를 축약하면 다음과 같다 */
+    animation:jyRotate 5s linear 0s 2;
+}
+
+@keyframes move{
+    0%{transform:translate(0%,0%);}
+    25%{transform:translateX(100%,0%);}
+    50%{transform:translate(100%,100%);}
+    75%{transform:translate(0%,100%);}
+    100%{transform:translate(0%,0%);}
+}
+.boxb{
+    width:400px;
+    height:400px;
+    background: blue;
+    animation:move 4s linear 0s infinite ;
+    transition:all 0.5s ease 0s;
+}
+.boxb:hover{
+    animation-play-state:paused;
+    /* 마우스를 올렸을 때 애니메이션이 일시정지됨 */
+    background: red;
+    border-radius:50% ;
+}
+.spantag{
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+    right:0;top:0;
+    transition:all 0.5s ease 0s ;
+    position: fixed;
+}
+.spantag:hover{
+    transform:rotate(90deg)
+}
