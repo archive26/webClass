@@ -1,105 +1,171 @@
 *{margin:0; padding:0;}
-h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight: normal;}    
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight:400;}    
 a{text-decoration:none; color:inherit; }
-strong,b{font-weight: normal;}
+strong,b{font-weight:400;}
 i,em,address{font-style: normal;}
 ul,ol{list-style:none;}
 
+/* common */
 html{
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'Noto Sans KR', sans-serif;
 }
-.contents_wrap{
-    margin:0 auto;
+.blankstyle:after{
+    content:"";
+    width:12px;
+    height:12px;
+    display: inline-block;
+    border: 1px solid red!important;
+    margin-left:4px;
+    background:url("../img/icn_header_new_win.svg") no-repeat 50% 50%;
 }
+/* layout */
+.contents_wrap{}
 /* header */
-header{ position: fixed;
+header{
+    position: fixed;
+    left:0; top:0;
+    width:100%;
+    z-index: 1000;
+    color: white;
+    height: 70px;
+    /* 높이를 잡아주지 않으면 헤더영역에 transition효과가 안 나타난다 */
+    transition: all 0.5s ease 0s;
+    overflow: hidden;
+}
+header:after{
+    content:"";
+    position:absolute;
+    left:0;top:70px;
+    width:100%;
+    height:1px;
+    background:#ddd;
+}
+header:hover{
+    background:#fff;
+    color:#000;
+    height:300px;
+}
+.innerheader{
+    width:1440px;
+    border:1px solid lime;
+    margin:0 auto;
+    display:flex;
+    height:70px;
+    justify-content: space-between;
+    align-items: center;
+}   
+.innerheader>*{border: 1px solid aqua;}
+.logoArea {width: 160px;}
+.logoArea img {width:100%; display:none;}
+.logoAre a{
+    display:block;
+    width:160px;
+    height:26px;
+    background:url("../img/cm_bi_white.svg") no-repeat 50% 50%;
+    background-size:contain;
+}
+header:hover .logoAre a{
+    background:url(../img/cm_bi_black.svg) no-repeat 50% 50%;
+    background-size: contain;
+}
+.langList{width: 160px;}
+.gnb{width: 800px;}
+.gnb>ul{display: flex;height:70px;}
+.gnb>ul>li{
+    border: 1px solid yellow;
+    flex: 1;
+    text-align: center;
+    position: relative;
+    
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    /* lign-height:70px; 를 주게되면 그 자식태그인 li도 상속이 되기 때문에 권장하지 않는다 */
+}
+.gnb>ul>li>a{
+    font-weight: bold;
+    font-size:1.1rem;
+}
+.gnb>ul>li>ul{
+    border:1px solid yellow;
+    position:absolute;
+    left:0;top:70px;
+    width: 100%;
+    padding-top:20px;
+    color: #777;
+}
+.gnb>ul>li>ul>li{
+    border: 1px solid pink;
+    margin-bottom: 10px;
+}
+.gnb>ul>li>ul>li:hover{
+    color:#000;
+}
+.gnb>ul>li>ul>li:last-of-type{margin-bottom: 0;}
+
+.langList>ul{
+    display: flex;
+    justify-content: space-between;
+}
+.langList>ul>li{
+    border:1px solid yellow;
+    flex:1;
+    text-align:center;
+    position: relative;
+}
+.langList>ul>li:after{
+    content:"";
+    /* 인라인 태그는 글씨처럼 나란히 배치가 된다 */
+    position:absolute;
+    /* 자동으로 인라인 블록 태그 형태가 된다 */
+    right:o; top:calc(50% - 5px);
+    width:1px; height:10px; background:white;
+}
+.langList>ul>li:last-of-type:after{display:none;}
+/* main */
+main{
+    position: relative;
+}
+.videoBanner{
+    height:780px;
+    position: relative;
+}
+.videoBanner:after{
+    content:"";
+    position:absolute;
+    position:absolute;
     left:0;top:0;
     width:100%;
-    border: 1px solid red;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    height: 100px;
-    font-weight:bold;
-    color: white;
+    height:100%;
+    background: rgb(0,0,0,0.2)
+    /* opacity:0.2; */
 }
-.logoArea img{
-    border: 1PX solid blue;
-    width: 200px;
-    
-}
-.gnb>ul{
-    display: flex;
-    border: 1px solid green;
-    justify-content: center;
-    align-items:flex-start
-}
-.gnb>ul>li{
-    margin-right: 80px;
-}
-.gnb>ul>li>.a{overflow: hidden;}
-.gnb .a:hover{}
-.langList>ul{
-    border: 1px solid blue;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: end;
-}
-/* main */
-.videoBanner{
-    width: 100%;
-    border: 1px solid red;
-    object-fit: cover;
-    position: relative;
-    z-index: -10;
-}
-.videoBanner>a{position: absolute;
-    top:calc(100% - 40%);right:calc(100% - 50%);
-    color: white;
-    background: gray;
-}
-.img{
-    position: absolute;
-    top:calc(100% - 60%);right:calc(100% - 60%);
-}
-.news{
-    display: flex;
-    justify-content: flex-start;
-} 
-.news>h3{ 
-    border: 1px solid red;
-    margin-left:40px;
-    height: 30px;
-}
-.b{
-    border: 1px solid blue;
+.videoBanner video{
     width:100%;
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 50px;
-    margin-left:-42px;
+    height:100%;
+    object-fit:cover;
 }
-.b>li{
-    margin-right: 50px;
-    margin:0 auto;
+.videoBanner>.flotingTxt{
+    border: 1px solid lime;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    z-index: 10;
+    text-align: center;
+    /* a태그의 자세히보기를 가운데 정렬 하기위해서는 부모태그에 가운데 정렬을 해주어야 하고
+    a 태그 형태인 inline, inline-block은 text와 같은 취급을 받는다 */
 }
-.culture>ul{
-    display: flex;
-    border: 1px solid red;
-    width: 100%;
-    margin:0 auto;
+.flotingTxt>h2{
+    margin-bottom:50px;
 }
-.notice>ul{display: flex;}
-
+.flotingTxt>a{
+    border: 1px solid lime;
+    padding:30px 110px;
+    background:rgba(255, 255, 255, 0.4);
+    /* bg color에서 투명도를 지정하는 것과 opacity: 0.4;를 지정해 주는 것은 다르다! */
+    display:inline-block;
+}
 /* footer */
-.footMenu1>ul{display: flex;}
-.footMenu2>ul{display: flex;}
-.footLogo{display: flex;}
-
-.snsMenu{
-    display: flex;
-    border: 1px solid red;
-    justify-content: flex-end;
-}
+footer{border: 10px solid green;}
