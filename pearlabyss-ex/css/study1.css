@@ -48,14 +48,12 @@ header:hover{
 }
 .innerheader{
     width:1440px;
-    border:1px solid lime;
     margin:0 auto;
     display:flex;
     height:70px;
     justify-content: space-between;
     align-items: center;
 }   
-.innerheader>*{border: 1px solid aqua;}
 .logoArea {width: 160px;}
 .logoArea img {width:100%; display:none;}
 .logoAre a{
@@ -73,7 +71,6 @@ header:hover .logoAre a{
 .gnb{width: 800px;}
 .gnb>ul{display: flex;height:70px;}
 .gnb>ul>li{
-    border: 1px solid yellow;
     flex: 1;
     text-align: center;
     position: relative;
@@ -88,7 +85,6 @@ header:hover .logoAre a{
     font-size:1.1rem;
 }
 .gnb>ul>li>ul{
-    border:1px solid yellow;
     position:absolute;
     left:0;top:70px;
     width: 100%;
@@ -96,7 +92,6 @@ header:hover .logoAre a{
     color: #777;
 }
 .gnb>ul>li>ul>li{
-    border: 1px solid pink;
     margin-bottom: 10px;
 }
 .gnb>ul>li>ul>li:hover{
@@ -109,7 +104,6 @@ header:hover .logoAre a{
     justify-content: space-between;
 }
 .langList>ul>li{
-    border:1px solid yellow;
     flex:1;
     text-align:center;
     position: relative;
@@ -147,7 +141,6 @@ main{
     object-fit:cover;
 }
 .videoBanner>.flotingTxt{
-    border: 1px solid lime;
     position:absolute;
     left: 50%;
     top: 50%;
@@ -161,11 +154,109 @@ main{
     margin-bottom:50px;
 }
 .flotingTxt>a{
-    border: 1px solid lime;
     padding:30px 110px;
     background:rgba(255, 255, 255, 0.4);
     /* bg color에서 투명도를 지정하는 것과 opacity: 0.4;를 지정해 주는 것은 다르다! */
     display:inline-block;
 }
+
+.news>ul{
+    display:flex;
+    width:1440px;
+    margin:0 auto;
+    justify-content:space-between;
+}    
+.news>h3{
+    margin-left:340px;
+    margin-bottom:15px;
+}
+.culture{
+    border: 1px solid red;
+}
+.culture>ul{
+    display:flex;
+    justify-content:center;
+    margin-top:50px;
+}
+.culture>ul>li{position: relative;}
+.culture>ul>li>a>h4{
+    position: absolute;
+    bottom:100px; left:40%;
+}
+.culture>ul>li>a>p{
+    position: absolute;
+    bottom:30px; left:90px;
+}
+.notice>ul{
+    width: 1440px;
+    margin:0 auto;
+    margin-top:100px;
+    display: flex;
+}
+.notice>ul>li{ 
+    flex:1;
+    margin-left: 15px;
+}
+.notice>ul>li:first-of-type{margin-left: 0px;}
+.notice>ul>li>a{
+    display: block;
+    width:100%;
+}
+.notice>ul>li>a>p{
+    color: #777;
+    font-size:0.9rem;
+    margin-bottom:5px;
+}
+.notice>ul>li>a>h4{font-weight:bold;}
+.notice>ul>li img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
 /* footer */
-footer{border: 10px solid green;}
+.foot{
+    border: 1px solid green;
+    width: 1440px;
+    margin:0 auto;
+    margin-top:15px;
+    margin-bottom:20px;
+}
+.footMenu1>ul{
+    border: 1px solid red;
+    display: flex;
+    width:1440px;
+    margin:0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    justify-content: space-between;
+}
+.footMenu1>ul>li>ul{
+    color: #777;
+    /* border: 1px solid green; */
+}
+.foot2{
+    border:1px solid blue;
+}
+.footMenu2>ul{
+    /* border: 1px solid green; */
+    display: flex;
+    margin:0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.coInfo{
+    display: flex;
+    justify-content:center;
+    position: relative;
+}
+.footLogo{display: flex;}
+.footLogo>h1 img{
+    border: 1px solid red;
+    width: 100px;height:100px;
+}
+.snsMenu{
+    /* border: 1px solid green; */
+    position: absolute;
+    top:0; right: 200px;
+}

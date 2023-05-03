@@ -1,0 +1,86 @@
+*{margin:0;padding:0;}
+ul,ol{list-style:none;}
+a{text-decoration:none; color:inherit;}
+
+/* layout */
+header{
+    background: rgb(247, 217, 162);
+    position:fixed;
+    left:0; 
+    top:0;
+    width:200px;
+    height:100%;
+    transition:all 0.5s ease 0s;
+    display:flex;
+    flex-direction:column;
+    /* main축 방향을 위에서 아래로 바꿔준다 ! */
+    justify-content:space-between;
+}
+header:after{
+    border:1px solid blue;
+    content:"";
+    /* flex-item 상태라 박스형태임 .그러므로 가로세로 지정 가능 */
+}
+header:hover{
+    width:300px;
+}
+header:hover + .container{
+    width:calc(100% - 300px);
+    margin-left:300px;
+}
+header>h1{}
+/* .gnb{
+    border:1px solid red;
+    position:absolute;
+    left:0;top:50%;
+    transform:translateY(-50%);
+    width:100%;
+    box-sizing:border-box;
+} */
+.gnb{
+    border:1px solid red;
+
+}
+.gnb>li{
+    height:50px;
+    overflow:hidden;
+    /* overflow:hidden을 사용하여 바깥쪽으로 흘러나온 2depth를 안보이게 함 */
+    transition:all 0.5s ease 0s;
+    border-bottom:1px solid #eee;
+}
+.gnb>li:hover{
+    height:220px;
+}
+.gnb>li>a{
+    display:flex;
+    height:50px;
+    align-items:center;
+    padding-left:50px;
+}
+.gnb>li>ul>li{
+    height:40px;
+}
+.gnb>li>ul>li:hover{
+    background: black;
+    color:white;
+}
+.gnb>li>ul>li>a{
+    display:flex;
+    /* a태그는 인라인태그이다! 인라인 블록아님 */
+    height:100%;
+    align-items: center;
+    padding-left:60px;
+}
+.container{
+    border:1px solid blue;
+    width:calc(100% - 200px);
+    margin-left:200px;
+    transition:all 0.5s ease 0s;
+}
+.container>div{
+    height:100vh;
+}
+.banner>img{
+    width:100%;height:100%;
+    object-fit:cover;
+}
