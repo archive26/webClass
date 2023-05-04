@@ -5,12 +5,19 @@ ul,ol{list-style:none;}
 .station{
     width:1270px;
     height:600px;
+    /* 부모태그에게 높이를 꼭 주어야 함. 그렇지 않으면 자식태그의 높이를 지정해도
+    부모만큼의 높이 지정이 되지 않는다 */
     margin:0 auto;
     overflow:hidden;
     position: relative;
+    /*position: relative 공중에 띄우는 배치 방법이 아니기 때문에 absolute속성을 주고싶은 태그의 
+    부모태그에게 relative 속성을 주어야 한다. */
 }
 .train{
-    width:400%;
+    /* width:400%; */
+    /* 반응형 디자인에는 너비가 바뀔 수 있으므로 무조건 px단위가 아닌 %단위를 사용 */
+    width:calc(400%/2.5);
+    /* 슬라이드 하나에 2개이상의 페이지가 보이길 원한다면 기차의 너비를 보이길 원하는 슬라이드의 개수만큼 나누어주면 됨 */
     height:100%;
     display:flex;
     background:pink;
@@ -29,11 +36,13 @@ ul,ol{list-style:none;}
     top:50%;
     left:0;
     transform:translateY(-50%);
+    /* 변형은 부모와 관계없이 해당 태그만 이동 */
     width:100%;
     display:flex;
     justify-content:space-between;
     padding:0 10px;
     box-sizing:border-box;
+    /* box-sizing:border-box; 패딩 값까지(=테두리의 굵기까지)포함해서 너비 지정 */
 }
 .pagination{
     border:1px solid blue;

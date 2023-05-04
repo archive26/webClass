@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+    <style>
+        img{
+            transition:all 1s ease 0s;
+            filter: brightness(0.2);
+        }
+        img:hover{
+            /* filter:grayscale(1); */
+            /* ↑ 0을 주면 완전히 어두워진다 */
+            /* filter: brightness(1); */
+            filter:hue-rotate(180deg);
+            /* 각도단위. 보색대비 효과.완전히 반대 색상 표현 */
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/flowers-gaf3a76dd0_640.jpg" alt="꽃">
+</body>
+</html>

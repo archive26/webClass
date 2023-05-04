@@ -1,0 +1,78 @@
+*{margin:0;padding:0;}
+ul,ol{list-style:none;}
+body{background-color: beige;}
+/* layout */
+.station{
+    width:100%;
+    height:500px;
+    border:1px solid red;
+    margin:0 auto;
+    position: relative;
+}
+.train{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.train>li{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;top:0;
+    border:1px solid green;
+    opacity: 0;
+}
+.train>li.show{
+    opacity:1;
+}
+.train>li> .box{
+    border:1px solid blue;
+    width:600px;
+    position:absolute;
+    left:50%;
+    transform:translateX(-100%);
+    bottom:50px;
+    /* 
+    padding-right:600px;
+    box-sizing:border-box;
+    너비조절하기 싫으면 이렇게 주면됨 
+    */
+}
+.box h4{
+    font-size:2rem;
+    margin-bottom:14px;
+}
+.train>li>img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:all 1s ease 0s;
+}
+.controler{
+    position: absolute;
+    top:50%;left:50%;
+    transform:translateY(-50%)translateX(-50%);
+    width:1200px;
+    display:flex;
+    justify-content:space-between;
+    padding:0 10px;
+    box-sizing:border-box;
+}
+.pagination{
+    border:1px solid blue;
+    position:absolute;
+    left:50%;
+    bottom:20px;
+    transform:translateX(-50%);
+    display:flex;
+}
+.pagination>li{
+    width:10px;height:10px;
+    border-radius:50px;
+    font-size:0;
+    margin-right:10px;
+    background:black;
+    opacity:0.4;
+}
+.pagination>li:last-of-type{margin-right:0;}
+.pagination>li.on{opacity:1;}
