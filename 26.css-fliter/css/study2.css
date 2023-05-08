@@ -9,13 +9,14 @@ ul,ol{list-style:none;}
 }
 .conList>li{
     flex:1;
+    /*리스트 하나 너비가 전체너비에 동일하게 차지할 수 있도록 하기위함(1:1:1)*/
     position:relative;
+    /* 앱솔루트 될 태그의 기준영역 설정 */
     overflow: hidden;
     /* 이미지가 흘러넘치는 것을 방지하기 위해 리스트에 히든 속성을 넣어준다 */
 }
 .conList>li:hover img{
     filter: grayscale(0)brightness(1);   
-    transition:all 0.6s ease 0s;
     transform: scale(1.2);
 }
 .conList>li>img{
@@ -23,6 +24,8 @@ ul,ol{list-style:none;}
     height:100%;
     object-fit:cover;
     filter: grayscale(1)brightness(0.7);
+    transition:all 0.6s ease 0s;
+    /* 마우스를 올리기 전 스타일에 transition을 준다 */
 }
 .box{
     position:absolute;
