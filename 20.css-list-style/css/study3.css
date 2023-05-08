@@ -13,14 +13,9 @@
     text-shadow:2px 2px 4px rgb(192, 228, 35); 
     transition:all 0.5s ease 0s;
 }
-<<<<<<< HEAD
 .box:hover{
     box-shadow:
     10px -30px 10px rgb(128, 128, 221),
     10px 30px 0 tomato,
     -10px 50px 0 rgb(206, 243, 206);
 }
-=======
-
-
->>>>>>> 120a785a6f6e8b558cca2d4d836825382aa2d58b

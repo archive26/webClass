@@ -16,7 +16,7 @@ img:hover{
 }
 .h{
     border:1px solid rgb(241, 172, 243);
-    width: 300px;
+    width: 100%
     height: 300px;
     transition:all 2s ease 0s;
 }
@@ -42,10 +42,10 @@ img:hover{
     border-radius 0.5s ease 3s; 처럼 각각의 속성에도 속성값을 줄 수 있다*/
 }
 .box:hover{
-    width:500px;
-    height:500px;
+    width:100px;
+    height:100px;
     background:gold;
-    border-radius:50%;
+    border-radius:100%;
 }
 .menu{
     border: 1px solid red;
