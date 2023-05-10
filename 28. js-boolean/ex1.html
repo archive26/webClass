@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>성적표예제</title>
+    <link rel="stylesheet" href="./css/es1.css">
 </head>
 <body>
     <h1>퀴즈</h1>
@@ -20,14 +21,42 @@
         <script>
         let name = prompt("이름을 입력하세요")
         let scoreKo =Number(prompt("국어 점수를 입력하세요"))
-        let scoreMa =Number(prompt("영어 점수를 입력하세요"))
-        let scoreEn =Number(prompt("수학 점수를 입력하세요"))
-        let scoreAver =(scoreKo+coreEn+scoreMa)/3
-        let grade =(scoreAver>=90?"A":scoreAver>=80?"B":scoreAver>=70?"C":"D")
+        let scoreEn =Number(prompt("영어 점수를 입력하세요"))
+        let scoreMa =Number(prompt("수학 점수를 입력하세요"))
+        let scoreAver =(scoreKo+scoreEn+scoreMa)/3
+        let grade =(scoreAver>=90?"A":
+                    scoreAver>=80?"B":
+                    scoreAver>=70?"C":"D")
 
 
-        document.write("["+name+"님의 평균점수는 "+scoreAver+"점이며 "+grade+"등급 입니다]")
-        // document.write(`[${name}님의 평균점수는 ${scoreAver}점이며 ${grade}등급 입니다]`)
+        // document.write("["+name+"님의 평균점수는 "+scoreAver+"점이며 "+grade+"등급 입니다]")
+        document.write(` <table class="gradeStyle">
+            <caption> ${name} 님의 성적표</caption>
+            <tr>
+                <th>국어</th>
+                <td>${scoreKo}점</td>
+            </tr>
+            <tr>
+                <th>영어</th>
+                <td>${scoreEn} 점</td>
+            </tr>
+            <tr>
+                <th>수학</th>
+                <td>${scoreMa}점</td>
+            </tr>
+            <tr>
+                <th>총합</th>
+                <td>${scoreKo+scoreEn+scoreMa}점</td>
+            </tr>
+            <tr>
+                <th>평균</th>
+                <td>${scoreAver}점</td>
+            </tr>
+            <tr>
+                <th>등급</th>
+                <td>${grade}</td>
+            </tr>
+      </table>`)
         
         </script>
     </p>
