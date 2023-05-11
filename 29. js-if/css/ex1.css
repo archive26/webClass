@@ -1,0 +1,22 @@
+table{
+    border-collapse:collapse;
+}
+.gradeStyle{
+    /* border: 1px solid red; */
+    width:500px;
+    margin:0 auto;
+}
+.gradeStyle caption{font-size:2rem; font-weight:bold;}
+.gradeStyle th{border:1px solid black;padding:5px 0;border-left:none;
+}
+.gradeStyle td{border:1px solid black;padding:5px 0;text-align: center;border-right:none;
+}
+.gradeStyle tr:last-of-type>th{
+    /* .gradeStyle>tr:last-of-type>th가 적용되지 않는 이유는 tr 태그를 만들면 자동적으로 자식인t body태그가 만들어진다. 그러므로 tr태그는 자식이 아닌 자손이 되는 것이다 */
+    background: #000;
+    color:white;
+}
+.gradeStyle tr:last-of-type>td{
+    background: #000;
+    color:white;
+}
