@@ -159,140 +159,121 @@ main{
     /* bg color에서 투명도를 지정하는 것과 opacity: 0.4;를 지정해 주는 것은 다르다! */
     display:inline-block;
 }
-.news1{
-    position: relative;
+/* news */
+.news{
+    width: 1440px;
+    margin:0 auto;
+    margin-top: 60px;
+    margin-bottom: 100px;
 }
-.news1>:after {
-    content: "";
-    position: absolute;
-    right:-40px;
-    top: calc(50% - 70px);
-    /* 컨텐츠 박스의 높이의 절반 영역으로 이동시키고 작대기가 가지고 있는 높이를 빼주면 중앙배치 가능 */
-    width: 1px;
-    height: 120px;
-    background: #575656;
+.news>h3{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom:26px;
 }
 .news>ul{
     display:flex;
-    width:1440px;
+    border-right: 1px solid #EBEBEB;
+    flex: 1;
+    padding:0 30px;
+}
+.news>ul>li:first-of-type{
+    margin-left: 0;
+}
+.news>ul>li:last-of-type{
+    margin-right: 0;
+    border-right:none;
+}
+.news>ul>li h4{
+    font-size:15px;
+    font-weight: bold;
+    margin-bottom:16px;
+}
+.date{
+    font-size: 10px;
+    color: #9a9a9a;
+    margin-bottom: 28px;
+}
+
+/* culture */
+.culture{
+    border: 1px solid red;
+    width: 1440px;
     margin:0 auto;
-    margin-bottom: 50px;
-    justify-content:space-between;
-}    
-.news>ul>li{
-    /* border: 1px solid blue; */
-}
-.news>ul>li .date{
-    margin-top:5px;
-    margin-bottom:10px;
-}
-.news>ul>li p{
-    color: rgb(126, 126, 126);
-}
-.news>ul>li h4{font-weight:bold;}
-.news>h3{
-    margin-left:340px;
-    margin-bottom:15px;
 }
 .culture>ul{
     display:flex;
-    justify-content:center;
-    margin-top:50px;
+    height: 574px;
 }
-.culture>ul>li{position: relative;}
-.culture>ul>li>a>h4{
-    position: absolute;
-    bottom:100px; left:40%;
-}
-.culture>ul>li>a>p{
-    position: absolute;
-    bottom:30px; left:90px;
-}
-.culture>.conList{
-    display: flex;
-    width:1440px;
-    height:500px;
-    margin:0 auto;
-    color:white;
-}
-.culture>.conList>li{
-    /* border: 1px solid red; */
-    flex:1;
-    position:relative;
+.culture>ul>li{
+    border: 1px solid lime;
+    flex: 1; 
+    /* 또는 width:20% */
+    position: relative;
     overflow: hidden;
 }
-.culture>.conList>li:hover img{
-    filter: grayscale(0)brightness(1);   
-    transition:all 0.6s ease 0s;
-    transform: scale(1.2);
+.culture>ul>li>a{
+    display: block;
+    height: 100%;
 }
-.culture>.conList>li img{
+.culture>ul>li>a>img{
     width:100%;
     height:100%;
     object-fit:cover;
-    filter: grayscale(1)brightness(0.7);
+    filter: grayscale(1);
+    transition: all 0.5s ease 0s; 
 }
-.culture:hover .box{opacity:1;}
-.conList>li:hover h3{
-    transform: translateY(-30px);
+.culture>ul>li:hover>a>img{
+    filter: grayscale(0);
+    transform: scale(1.3);
 }
-.box>p{
-    padding-top:20px;
-    position: relative;
-    transition:all 0.6s ease 0s; 
-}
-.box{
-    /* border: 1px solid red; */
+.floatingbox{
     position: absolute;
-    bottom: 20px;left:50%;
-    transform:translateX(-50%);
-    /* 가운데 정렬 하기위해 X값을 준다! */
+    left:50%; bottom:60px;
+    transform: translateX(-50%);
+    /* 각각 너비의 절반만큼 빼야 텍스트가 중앙에 배치가됨 */
     text-align: center;
+    color: #fff;
+    /* 자동으로 그 자식도 흰색으로 상속받음 */
 }
-.box>h4{
-    color:rgb(250, 246, 246);
-    margin-bottom:10px;
-    text-align: center;
-    transition:all 0.6s ease 0s;
+.floatingbox>h4{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    transform: translateY(20px);
+    transition: all 0.5s ease 0s;
 }
-.box>p{opacity: 0;}
-.conList>li:hover .box>p{opacity: 1;}
-.box>p:after{
-    content:"";
-    position:absolute;
+.culture>ul>li:hover .floatingbox h4{
+    transform: translateY(0);
+}
+.floatingbox>p{
+    padding-top: 30px;
+    position: relative;
+    opacity: 0;
+    transition:all 0.5s ease 0s;
+}
+.culture>ul>li:hover .floatingbox>p{
+    opacity: 1;
+}
+.floatingbox>p:after{
+    content: "";
+    position: absolute;
     left:50%;
-    transform:translateX(-40%) ;
+    transform: translateX(-50%);
     top:0;
     width:30px;
     height:1px;
-    background: white;
+    background: #fff;
 }
-.notice>ul{
-    width: 1440px;
-    margin:0 auto;
-    margin-top:100px;
-    display: flex;
-}
-.notice>ul>li{ 
-    flex:1;
-    margin-left: 15px;
-}
-.notice>ul>li:first-of-type{margin-left: 0px;}
-.notice>ul>li>a{
-    display: block;
-    width:100%;
-}
-.notice>ul>li>a>p{
-    color: #777;
-    font-size:0.9rem;
-    margin-bottom:5px;
-}
-.notice>ul>li>a>h4{font-weight:bold;}
-.notice>ul>li img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-}
+
+
+
+
+
+
+
+
+   
 
 /* footer */
 footer{
@@ -318,6 +299,7 @@ footer{
     background: rgb(104, 103, 103);
   }
 .foot{
+    display: flex;
     width: 1440px;
     margin:0 auto;
     margin-top:15px;

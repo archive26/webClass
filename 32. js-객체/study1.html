@@ -22,7 +22,7 @@
          gender:"남자",
          married:false
         }
-     //{property(속성)는 key:value 로 구성되어있고 key는 지정해줄 수 있다. 객체로 나타낼 경우 가독성이 좋다.}
+     //{property(속성)는 key:value 로 구성되어있고 key는 지정해줄 수 있다(변수). 객체로 나타낼 경우 가독성이 좋고 예측이 가능해진다.}
      let person2 = [
          "정현진",
          38,
@@ -35,6 +35,7 @@
      //  alert(person1.name)
      // alert(person1.age)
      //alert(person1.gender) 
+     //alert(person1.married)
      
      person3 = {
         name : "정현진",
@@ -56,13 +57,13 @@
             ma:{
                 semester1:100,
                 semester2:96
-                //객체안의 공간은 독립된 공간이여서 중복으로 사용 가능하다
+                //객체{}안의 공간은 독립된 공간이여서 중복으로 사용 가능하다
             }
         }
      }
     //  person3.scoreArray[1] //90
     //  person3.scoreObj.en //90
-    // person3.scoreObj.en.semester2
+    //  alert(person3.scoreObj.en.semester2) 
     
     let b = {
         name : "정현진",

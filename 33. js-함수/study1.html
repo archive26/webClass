@@ -50,12 +50,15 @@
     <h2>함수안에서 return</h2>
     <p>함수안에서 return구문을 쓰게되면 return 구문 오른쪽의 결과를 함수가 사용됬던 그 자리에 남기고 함수는 그 즉시 종료된다.</p>
     <script>
-        // function sumNumber(n1,n2){
-        //     return n1+n2
-        //     alert("TEST")
-        // }
-        // let result = sumNumber(3,4) + sumNumber(4,6) 
-        // alert(result)
+        function sumNumber(n1,n2){
+            return n1+n2
+            //만약 return을 쓰지않으면 7,10 은 그 자리에 남겨지지 않고 let result에도 아무런 값이 남겨지지 않는다.
+            alert("TEST")
+        //위에 return이 실행되면서 그 즉시 종료되므로 밑의 alert창이 뜨지 않는다
+        }
+        let result = sumNumber(3,4) + sumNumber(4,6) 
+        // 그 자리에 sumNumber(3,4)=>7  sumNumber(4,6) =>10이라는 값을 남김
+        alert(result)
 
         function abc(){
             return "abc"
