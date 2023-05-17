@@ -173,15 +173,17 @@ main{
 }
 .news>ul{
     display:flex;
-    border-right: 1px solid #EBEBEB;
-    flex: 1;
+}
+.news>ul>li{
+    flex:1;
     padding:0 30px;
+    border-right: 1px solid #ddd;
 }
 .news>ul>li:first-of-type{
-    margin-left: 0;
+    padding-left: 0;
 }
 .news>ul>li:last-of-type{
-    margin-right: 0;
+    padding-right: 0;
     border-right:none;
 }
 .news>ul>li h4{
@@ -200,6 +202,7 @@ main{
     border: 1px solid red;
     width: 1440px;
     margin:0 auto;
+    margin-bottom:160px;
 }
 .culture>ul{
     display:flex;
@@ -265,97 +268,136 @@ main{
     height:1px;
     background: #fff;
 }
-
-
-
-
-
-
-
-
-   
-
-/* footer */
-footer{
-    position: relative;
-}
-.foot2::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 1px;
-    background: rgb(104, 103, 103);
-  }
-  
-.foot::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 77px;
-    width: 100%;
-    height: 1px;
-    background: rgb(104, 103, 103);
-  }
-.foot{
-    display: flex;
-    width: 1440px;
+.notice{
+    border: 1px solid red;
+    width:1400px;
     margin:0 auto;
-    margin-top:15px;
-    margin-bottom:30px;
 }
-.foot::after{
-    /* border: 1px solid red; */
-
+.notice>ul{
+    display: flex;
+    justify-content:space-between;    
+}
+.notice>ul>li{
+    width:calc((100% - 60px)/4) ;
+    border: 1px solid blue;
+}
+.notice li figure{
+    height: 190px;
+    border: 1px solid orange;
+    overflow: hidden;
+}
+/* 흘러넘치는 이미지를 가리기 위해 만든 figure */
+.notice li figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:all 0.5s ease 0s ;
+}
+.notice li:hover figure img{
+    transform: scale(1.2);
+}
+.notice li p{
+    font-size:12px;
+    margin:20px 0;
+}
+.notice li h4{
+    font-size: 15px;
+    font-weight: bold;
+}
+/* footer */
+footer{margin-top: 200px;}
+/* 다른서브페이지에서도 footer가 사용될 때 자동으로 여백이 적용됨*/
+.footMenu1{
+    border: 1px solid #ebebeb;
+    padding-top: 70px;
+    margin-bottom: 50px;
 }
 .footMenu1>ul{
-    display: flex;
+    border: 1px solid red;
+    width: 1120px;
     margin:0 auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    justify-content: space-between;
+    display: flex;
+}
+.footMenu1>ul>li{
+    border: 1px solid blue;
+    width:calc(100%/6) ;
+}
+.footMenu1>ul>li>a{
+    font-weight: bold;
+    font-size: 1.12rem;
 }
 .footMenu1>ul>li>ul{
-    color: #777;
+    border: 1px solid red;
+    margin-top: 18px;
+    color: #9a9a9a;
 }
-
+.footMenu1>ul>li>ul>li{
+    margin-bottom: 14px;
+    transition: all 0.5s ease 0s;
+}
+.footMenu1>ul>li>ul>li:hover{
+    color: #000;
+}
+.footMenu1>ul>li>ul>li:last-of-type{
+    margin-bottom:0;
+}
+.footMenu2{
+    border: 1px solid #ebebeb;
+    padding-bottom: 75px;   
+}
 .footMenu2>ul{
-    /* border: 1px solid green; */
+    border: 1px solid blue;
+    width: 1120px;
+    margin:0 auto;
     display: flex;
-    /* margin:0 auto; */
-    justify-content: space-between;
+}
+.footMenu2>ul>li{
+    border: 1px solid red;
+    width:calc(100%/6);
+    font-size: 1.12rem;
+    font-weight: bold;
+}
+.footMenu2>ul>li>.blue{
+    color: #3774DA;
 }
 .coInfo{
+    width: 1440px;
+    margin:0 auto;
+    border:1px solid red;
     display: flex;
-    justify-content:center;
-    align-items: center;
-    position: relative;
+    justify-content: space-between;
+    padding:26px 0;
+}
+.coInfo:before{
+    content: "";
+    width: 138px;
+    border: 1px solid blue;
 }
 .footLogo{
-    display: flex;
+    border: 1px solid red;
+    display: flex; 
     align-items: center;
 }
-.footLogo>h1 img{
-    /* border: 1px solid red; */
-    width: 100px;height:100px;
+.copy{
+    color: #9a9a9a;
+    margin-left: 36px;
 }
 .snsMenu{
-    /* border: 1px solid green; */
-    position: absolute;
-    top:0; right: 200px;
+    border: 1px solid red;
+    width: 138px;
+
 }
 .snsMenu>ul{
-    display:flex;
-    width:100%;
-    height: 100%;
-    position: absolute;
-    bottom:-40px;left: -50px;
+    display: flex;
+    justify-content: space-between;
 }
 .snsMenu>ul>li{
-    margin-left:10px;
+    border: 1px solid red;
+    width: 38px;
 }
 .snsMenu>ul>li img{
-    width: 30px;
-    height: 30px;
+    width: 100%;
+}
+.footLogo img{
+    width: 120px;
 }
