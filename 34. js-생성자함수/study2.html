@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자함수</title>
+    <script src="./js/person.js"></script>
+</head>
+<body>
+    <script>
+        
+        let person1 = new Person("정현진",38)
+        person1.sayHello()
+        //new함수를 써서 그 자리에 객체{}가 남겨지도록 함
+        person1.intro()
+        let person2 = new Person("이혁진",25)
+        person2.sayHello()
+        person2.intro()
+        let person3 = new Person("안지연",26)
+        person3.sayHello()
+        person3.intro()
+
+        //생성자함수는 관습적으로 맨 앞부분을 대문자로 표현함
+    </script>
+</body>
+</html>
