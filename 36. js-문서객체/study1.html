@@ -65,16 +65,16 @@
         //선택한 태그에 id속성에 저장된 속성값을 리턴함
 
        let imgbox= document.querySelector(".c")
-       imgbox.setAttribute(src="./img/bird2.jpg")
+       imgbox.setAttribute("src","./img/bird2.jpg")
        //src="./img/bird1.jpg" 를 src="./img/bird2.jpg"로 바꿈
-       imgbox.setAttribute("art","검은 새")
+       imgbox.getAttribute("alt","검은 새")
     </script>
 
     <h2 class="d">태그의 컨텐츠 제어하기</h2>
     <script>
         let tagTitle =document.querySelector(".d")
         console.log(tagTitle.textContent)
-        tagTitle.innerText = "컨텐츠 내용 수정하기" //텍스트만 수정
+        tagTitle.innerText = "컨텐츠 <i>내용 수정하기</i>" //텍스트만 수정
         tagTitle.innerHTML = "컨텐츠 <i>내용</i> 수정하기" //태그형태도 같이 넣어서 텍스트 수정
     </script>
 <!-- 태그의 형태는 객체형태들{}로 이루어져 있다 ~ -->
