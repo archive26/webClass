@@ -1,0 +1,43 @@
+.btnPopup{
+    border: 1px solid black;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    padding:4px 20px ;
+    cursor: pointer;
+}
+.hiddenPopup{
+    position: fixed;
+    left:0;
+    top:0;
+    width:100% ;
+    height: 100% ;
+    background: rgba(0, 0, 255, 0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:0 200px ;
+    box-sizing: border-box;
+    transition:all 1s ease 0s;
+    opacity: 0;
+    pointer-events: none;
+    /* 기본값은 auto .마우스커서에 반응하지 못하게 함*/
+    z-index: 1000;
+    transform: translateX(-100%);
+}
+.hiddenPopup.show{
+    opacity: 1;
+    pointer-events: auto;
+    /* 마우스커서에 반응함 */
+    transform: translateX(0%);
+}
+.btnPopupClose{
+    border: 1px solid white;
+    padding:4px 20px ;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor:pointer;
+}

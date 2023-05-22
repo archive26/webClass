@@ -25,7 +25,9 @@
     <script>
        window.onload = function(){
           let p1 = document.querySelector(".p1")
+          //문서에서 css클래스명이 p1인 태그 하나를 선택하고 그자리에 문서객체형태로 남긴다
           p1.style.border="1px solid red"
+          //인라인스타일 방식 - 무조건 우선순위1000점
           p1.classList.add("on")
           p1.classList.remove("on")
        }    
