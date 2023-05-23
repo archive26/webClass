@@ -1,0 +1,68 @@
+*{margin:0;padding:0;}
+ul,ol{list-style:none;}
+img{
+    max-width:100%;
+    /* 선택한 태그의 너비의 최대값을 지정 */
+}
+
+.station{
+    width: 100%;
+    height: 600px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.train{
+    width:400%;
+    height:100%;
+    display: flex;
+    /* transform: translateX(-500px); */
+    transition:all 0.5s ease 0s;
+}
+.train>li{
+    flex: 1;
+    /* 높이는 지정할 필요가 없다. */
+    position: relative;
+}
+.train>li:after{
+    content:"";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    background:linear-gradient(90deg,black,transparent)
+}
+.train>li>img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    /* img의 가로,세로 비율 지정 */
+    /* filter: brightness(0.4); */
+}
+.controler{
+    border: 1px solid black;
+    padding:10px 0;
+    text-align: center;
+}
+.slideTxt{
+    width:1200px;
+    position: absolute;
+    /* 부모태그인 li에게 position:relative;를 준다 */
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    color: white;
+    font-size: 3rem;
+    padding-right: 600px;
+    box-sizing: border-box;
+    transition:all 0.5s ease 1s;
+    opacity: 0;
+}
+.train>li.on .slideTxt{
+    top:50%;
+    opacity: 1;
+}
+.slideTxt>p{
+    font-size: 0.4em;
+}

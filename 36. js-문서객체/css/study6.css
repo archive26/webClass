@@ -13,14 +13,17 @@ a{text-decoration: none;color: inherit;}
     cursor: pointer;
     /* 마우스를 올렸을 때 커서 모양이 손가락모양으로 */
     z-index: 1000;
+    /* 형제태그끼리 비교하는 것을 원칙으로 함 */
 }
 .btnMenu>span {
     width: 20px;
     height: 1px;
     background: #000;
     display: block;
+    /* span태그는 인라인레벨(글씨처럼 나란히 배치됨) 태그이기 때문에 블록(박스형태/위->아래 배치)으로 형태를 바꿔준다 */
     margin: 6.7px auto;
     transform-origin: 0% center;
+    /* 태그가 변형될 시 기준좌표를 좌측중앙으로(center) 이동 */
     transition: all 0.5s ease 0s;
 }
 .btnMenu.close > span:nth-of-type(2){
@@ -41,6 +44,7 @@ nav{
     left:0;top:0;
     /* background: rgb(184, 223, 77); */
     opacity: 0;
+    /* display:none과 다르게 공간은 그대로 차지한 상태로 투명도만 조절 */
     pointer-events: none;
     /* transition: all 0.5s ease 0s; */
 }

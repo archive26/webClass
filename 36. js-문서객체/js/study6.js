@@ -3,7 +3,9 @@ window.onload = function(){
     let menuState = false
     let btnMenu = document.querySelector(".btnMenu")
     let navTag = document.querySelector("nav")
+
     btnMenu.addEventListener("click",function(){
+        //클릭 할 때만 실행.
         if(menuState == false){
             //메뉴가 닫혀있는 경우 실행되는 코드
             btnMenu.classList.add("close")

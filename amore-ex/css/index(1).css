@@ -97,7 +97,6 @@ header{
     left:0;top:40px;
     width: 100%;
     display: none;
-    border: 1px solid red;
 }
 .mainBanner>dl>dt.on+dd{
     display: block;
@@ -130,10 +129,14 @@ header{
     background:url(../img/bg_service.gif) no-repeat 0 4px;
     line-height: 163%;
 }
+.bannerTabmenu{
+    cursor: pointer;
+}
 .tabMenu{
     width: 190px;
     height: 110px;
     position: relative;
+    cursor: pointer;
 }
 
 .tabMenu>dt{
@@ -151,7 +154,8 @@ header{
 .tabMenu>dt.on{ background: #4152ba;}
 .tabMenu>dd{
     position: absolute;
-    left:0;top:30px;
+    left:0;
+    top:30px;
     width:100%;
     /* 부모만큼의 너비를 주기위해 100%를 준다 */
     height: 80px;
