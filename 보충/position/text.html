@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        .outter{
+            border:1px solid blue;
+            width:700px;
+            height:800px;
+            position:relative;
+            margin:0 auto;
+            overflow: hidden;
+        }
+        .outter:hover .box{
+            transform:translateX(0%)
+        }
+        *{margin:0;padding:0;}
+        .box{
+            transition:all 0.5s ease 0s;
+            border:1px solid red;
+            position:absolute;
+            top:0px;
+            width:300px;
+            height:100%;
+            background:gray;
+            right:0px;
+            transform:translateX(100%);
+        }
+        .centerbox{
+            border:1px solid red;
+            position:absolute;
+            left:50%;
+            transform:translate(-50%,-50%);
+            top:50%;
+            padding:22.934px 37.786px;
+            width:200px;
+            height:123px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outter">
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, omnis voluptas quas placeat architecto quos illo molestiae quasi eum nisi quibusdam ratione molestias aperiam quia! Eos ut aspernatur pariatur labore?
+        </div>
+        <div class="centerbox">
+            center
+        </div>
+    </div>
+    
+</body>
+</html>
