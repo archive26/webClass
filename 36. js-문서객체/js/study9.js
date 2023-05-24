@@ -3,6 +3,8 @@ window.onload = function(){
     let nextBtn = document.querySelector(".btnNext")
     let prevBtn = document.querySelector(".btnPrev")
     let train = document.querySelector(".train")
+    let page = document.querySelector(".pagination")
+    let pageList = page.children
     let trainList = train.children
     let count = 0
 
@@ -14,8 +16,10 @@ window.onload = function(){
 
         for(let i=0; i<trainList.length ;  i++){
             trainList[i].classList.remove("on")
+            pageList[i].classList.remove("on")
         }
         trainList[count].classList.add("on")
+        pageList[count].classList.add("on")
     }) 
 
     prevBtn.addEventListener("click",function(){
@@ -25,10 +29,31 @@ window.onload = function(){
         
         for(let i=0; i<trainList.length ;  i++){
             trainList[i].classList.remove("on")
+            pageList[i].classList.remove("on")
         }
         trainList[count].classList.add("on")
-    
+        pageList[count].classList.add("on")
     })
+
+    
+   
+  for(let a=0; a<4; a++){
+    pageList[a].addEventListener("click",function(){
+        count = a //순번에 맞는 인덱스를 카운트변수에 저장한다
+        for(let i=0; i<trainList.length ;  i++){
+            trainList[i].classList.remove("on")
+            pageList[i].classList.remove("on")
+        }
+        trainList[a].classList.add("on")
+        pageList[a].classList.add("on")
+
+        train.style.transform = `translateX(-${25*a}%)`
+    })
+  } 
+   
+
+
+
 
 
 }

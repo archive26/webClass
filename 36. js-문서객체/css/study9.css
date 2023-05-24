@@ -10,6 +10,7 @@ img{
     height: 600px;
     margin:0 auto;
     overflow: hidden;
+    position: relative;
 }
 .train{
     width:400%;
@@ -49,7 +50,7 @@ img{
     position: absolute;
     /* 부모태그인 li에게 position:relative;를 준다 */
     left:50%;
-    top:50%;
+    top:calc(50% + 80px);
     transform: translate(-50%,-50%);
     z-index: 10;
     color: white;
@@ -65,4 +66,29 @@ img{
 }
 .slideTxt>p{
     font-size: 0.4em;
+}
+.pagination{
+    position:absolute;
+    /* border: 1px solid red; */
+    left:50%;
+    bottom:50px;
+    color: #fff;
+    display: flex;
+    transform: translateX(-50%);
+    /* 가운데 리스트태그를 중앙으로 배치하기위해 주는 속성 */
+
+}
+.pagination>li{
+    border:1px solid aqua;
+    font-size:0;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.pagination>li.on{
+    background: aqua;
+}
+.pagination>li:last-of-type{
+    margin-right: 0;
 }

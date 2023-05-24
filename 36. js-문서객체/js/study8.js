@@ -18,11 +18,12 @@ window.onload = function(){
 
     for(let i=0; i<tabTitles.length; i++){
         tabTitles[i].addEventListener("click",function(){
+
             for(j=0; j<tabTitles.length; j++){
                 tabTitles[j].classList.remove("on")
             }
             this.classList.add("on")
-
+//리스트에 on을 다 지우고 클릭한 리스트에 on을 추가해준다
             tabDes.innerHTML = tabDescription[i]
 
         })     
