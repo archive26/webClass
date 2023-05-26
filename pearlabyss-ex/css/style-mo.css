@@ -1,3 +1,4 @@
+
 @media (max-width:768px){
     /* (300/340)*100 */
     .contents_wrap{}
@@ -5,7 +6,6 @@
 
     .pc{display:none;}
     header.mo{
-        border:1px solid red;
         position:fixed;
         left:0;
         top:0;
@@ -14,43 +14,156 @@
         z-index: 1000;
     }
    .innerHeader{
-    width: 88%;
-    margin:0 auto;
-    border: 1px solid lime;
-    display: flex;
-    height: 100%;
-    justify-content: space-between;
-    align-items:c ;
+        width: 88%;
+        /* 모바일 디자인 너비 (header) : 340px
+        innerheader 의 영역을 재보고(303px) %수치로 나타내야함  
+        모바일 화면 공식 : ( 303px /340px) X 100 % */
+        margin:0 auto;
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        align-items:c ;
    }
    .btnMoMenu{
-    border:1px solid red;
-    width:6.4vw;
-    height:6.4vw;
+        width:6.4vw;
+        /*  .btnmomenu (22/303 innerheader의 너비) X 100 %  또는
+        (22/340전체 화면의 너비)X 100 vw */
+        height:6.4vw;
+   }
+   .btnMoMenu>span{
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        display: block;
+        margin:3px 0 ;
    }
    .btnMenuLang{
-    border: 1px solid red;
         width:6.4vw ;
         height: 6.4vw;
+        /*  vw:화면너비 기준으로 설정 */
+        /* %단위는 부모태그인 innerheader를 기준으로 너비가 설정되므로 
+        사용하지 않는다 */
    }
-   .btnMenuLang>img{
+   .btnMenuLang img{
         width:100% ;
         height: 100%;
         object-fit: contain;
    }
    .moLogo{
-    width: 31.47vw;
-    /* 화면너비에 대한 비율: (107/340)*100*/
-    max-width: 230px;
+        width: 31.47vw;
+        /* 화면너비에 대한 비율: (107/340)*100*/
+        max-width: 230px;
    }
    .moLogo a img{
-    width: 100%;
+        width: 100%;
    }
+
+   /* mobile menu */
+   .moMenu{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1100;
+        pointer-events: none;
+   }
+   .blackcover{
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 0.5s ease 0s;
+        pointer-events: none;
+   }
+   .moMenu.show .blackcover{
+        opacity: 0.8;
+        pointer-events: auto;
+   }
+   .moGnb{
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 75%;
+        max-width: 310px;
+        min-width: 290px;
+        height: 100%;
+        /* overflow: auto; */
+        /* 바깥으로 흘러넘치는 콘텐츠는 스크롤바를 만들어서 표현*/
+        transform: translateX(-100%);
+        /* 기준이 본인 기준이므로 75%가 아니라 100%임 */
+        transition: all 0.5s ease 0.1s;
+   }
+   .moMenu.show .moGnb{
+        transform: translateX(0%);
+   }
+   .logoMo{
+        width: 6.4vw;
+        width: 31.47vw;
+        max-width: 230px;
+        margin:0 auto;
+        margin-top: 22px;
+        margin-bottom: 42px;
+   }
+   .logoMo img{
+        width: 100%;
+   }
+   .mobileMenuList ul{
+        /* display: none; */
+        margin-top: 14px;
+        padding-left: 10px;
+
+   }
+   .mobileMenuList ul>li{
+        color: #9a9a9a;
+        font-weight: 400;
+        margin-bottom: 6px;
+   }
+   .mobileMenuList ul>li:last-of-type{
+        margin-bottom: 0;
+   }
+   .mobileMenuList{
+        width: 88%;
+        margin:0 auto;
+        height: calc(100% - 130px);
+        overflow: auto;
+   }
+   .mobileMenuList>li{
+        /* padding:12px ; */
+        font-size: 1.12rem;
+        font-weight: bold;
+        position: relative;
+   }
+   .mobileMenuList>li>a{
+        border-bottom: 1px solid #ccc;
+        display: block;
+        padding: 12px;
+   }
+   .mobileMenuList>li:after{   
+        content: "";
+        position: absolute;
+         /*position을 주면 기본형태 display:inline; 에서 lnline block형태로 자동으로 변환됨 */
+        width: 14px;
+        height: 14px;
+        border: 1px solid #161616;
+        right: 20px;
+        top: 12px;
+        border-right: none;
+        border-top: none;
+        transform: rotate(-45deg);
+   }
+
     /* main */
     main{
         position: relative;
     }
     .videoBanner{
-        height:780px;
+        height:64vh;
+        /* 사용하는 휴대폰의 다양한 모바일화면의 환경에 따라 픽셀단위보다 vh단위를 사용한다 */
         position: relative;
     }
     .videoBanner:after{
@@ -77,19 +190,25 @@
         text-align: center;
         /* a태그의 자세히보기를 가운데 정렬 하기위해서는 부모태그에 가운데 정렬을 해주어야 하고
         a 태그 형태인 inline, inline-block은 text와 같은 취급을 받는다 */
+        width: 74vw;
     }
     .flotingTxt>h2{
         margin-bottom:50px;
+        width: 100%;
+    }
+    .flotingTxt>h2 img{
+        width: 100%;
+
     }
     .flotingTxt>a{
-        padding:30px 110px;
-        background:rgba(255, 255, 255, 0.4);
+        padding: 3vw 13vw;
+        background:rgba(255, 255, 255, 0.391);
         /* bg color에서 투명도를 지정하는 것과 opacity: 0.4;를 지정해 주는 것은 다르다! */
         display:inline-block;
     }
     /* news */
     .news{
-        width: 1440px;
+        width: 90%;
         margin:0 auto;
         margin-top: 60px;
         margin-bottom: 100px;
@@ -99,25 +218,21 @@
         font-weight: bold;
         margin-bottom:26px;
     }
-    .news>ul{
+    .news ul{
         display:flex;
+        /* flex-direction: column; */
     }
-    .news>ul>li{
-        flex:1;
-        padding:0 30px;
-        border-right: 1px solid #ddd;
+    .news ul>li{
+       
     }
-    .news>ul>li:first-of-type{
-        padding-left: 0;
-    }
-    .news>ul>li:last-of-type{
-        padding-right: 0;
-        border-right:none;
-    }
-    .news>ul>li h4{
+    .news ul>li h4{
         font-size:15px;
         font-weight: bold;
         margin-bottom:16px;
+    }
+    .news .swiper-pagination{
+        position: relative;
+        margin-top: 50px;
     }
     .date{
         font-size: 10px;
@@ -328,5 +443,10 @@
     .footLogo img{
         width: 120px;
     }
-    
+
+
 }
+
+
+   
+
