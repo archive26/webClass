@@ -288,6 +288,7 @@
         font-size: 15px;
         font-weight: bold;
     }
+
     /* footer */
     footer{margin-top: 200px;}
     /* 다른서브페이지에서도 footer가 사용될 때 자동으로 여백이 적용됨*/
