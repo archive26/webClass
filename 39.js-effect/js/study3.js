@@ -16,8 +16,12 @@ $(document).ready(function(){
     //btnTop을 클릭하면 스크롤바가 가장 최상단으로 부드럽게 이동될 수 있도록
 
     $(".btnTop").click(function(){
-        $("html,body").animate({scrollTop:0},1000)
-
+        // $("html,body").stop().animate({scrollTop:0},1000)
+        // moveScroll(0,2000)
+        moveScroll({
+            top:0,
+            speed:2000
+        })
     }) 
 
 
@@ -27,8 +31,19 @@ $(document).ready(function(){
 
         let target = $(this).attr("href")
         //클릭한 a태그의 href속성에 저장된 속성값이 리턴되어 target변수에 저장된다.(문자데이터 헝태로 "#s1" "#s2" ... )
-
         let target_top = $(target).offset().top
-        $("html,body").animate({scrollTop:target_top},1000)
+        // $("html,body").stop().animate({scrollTop:target_top},1000)
+        // moveScroll(target_top,1000)
+        moveScroll({top:target_top,speed:1000})
     })
+
+    // function moveScroll(top,speed){
+    //     $("html,body").stop().animate({scrollTop:top},speed)
+    // }
+
+    function moveScroll(option){
+            $("html,body").stop().animate({scrollTop:option.top},option.speed)
+    }
+
+
 });
