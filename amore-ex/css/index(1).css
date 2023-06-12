@@ -42,7 +42,7 @@ header{
 }
 .lnb>li{
     padding-right: 15px;
-    background: url(../img/bg_sideMenu.gif) no-repeat calc(100% - 5px) 50%;
+    background: url(../img/bg_sideMenu.gif) no-repeat calc(100% - 5px) 50% ;
     color: #888;
     font-size: 0.9rem;
     text-transform: uppercase;
