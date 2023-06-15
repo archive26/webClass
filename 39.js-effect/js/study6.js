@@ -23,7 +23,7 @@ $(document).ready(function(){
         count++
         if(count>4){count=0;} 
         moveSlider(count)
-    },1000)
+    },5000)
 
     $(".station").mouseover(function(){
         clearInterval(timer)
@@ -35,7 +35,7 @@ $(document).ready(function(){
             count++
             if(count>4){count=0} 
             moveSlider(count)
-        },2000)
+        },5000)
     })
 
     function moveSlider(idx){
