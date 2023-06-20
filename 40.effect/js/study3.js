@@ -8,8 +8,18 @@ $(document).ready(function(){
         //     textSize:70
         // })
         textAni(".title",{
-            textSize:100
+            textSize:100,
+            aniSpeed:0.5,
+            effect:"moveBottomToTop"
         })
+        textAni(".title2",{
+            textSize:15,
+            aniSpeed:0.5,
+            aniDelay:0.01,
+            effect:"fadeInOut"
+        })
+
+        
     })
 
 })

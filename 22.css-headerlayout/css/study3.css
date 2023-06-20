@@ -1,0 +1,114 @@
+*{margin:0;padding:0;}
+a{text-decoration:none;color:inherit;}
+ul,ol{list-style:none;}
+img{max-width:100%;}
+
+/* layout */
+header{
+    border-bottom: 2px solid rgb(77, 64, 82);
+    height: 80px;
+    position: relative;
+}
+header:after{
+    content: "";
+    position: absolute;
+    top:80px;
+    left:0 ;
+    width: 100%;
+    height: 0px;
+    background: #fffefe;
+    opacity: 0.85;
+    transition: all 0.5s ease 0s;
+}
+header.on:after{
+    height: 230px;
+}
+header:before{
+    content: "";
+    position: absolute;
+    top:80px;
+    left:0 ;
+    width: 40%;
+    height: 0px;
+    background: rgb(240, 255, 200);
+    opacity: 0.85;
+    transition: all 0.5s ease 0s;
+}
+header.on:before{
+    height: 230px;
+}
+.innerHeader{
+    /* border: 1px solid blue; */
+    width: 1400px;
+    height: 100%;
+    margin:0 auto;
+    display: flex;
+    justify-content:space-between;
+    /* align-items:center ; */
+    position: relative;
+}
+.logo{
+    /* border: 1px solid red; */
+    align-self: center;
+    /* 선택한 아이템만 수직축 기준 중앙 정렬 */
+}
+.gnb{
+    /* border: 1px solid green; */
+    width: 800px;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.gnb>li{
+    flex: 1;
+    /* border: 1px solid blue; */
+}
+.gnb>li>a{
+    /* border: 1px solid red; */
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    /* 텍스트 노드 */
+}
+.gnb>li>a:hover{
+    background: #000;
+    color: #ffffff;
+}
+/* 2depth  */
+.gnb>li:hover .gnb2dep{
+    opacity: 1;
+    pointer-events: auto;
+}
+.gnb2dep{
+    /* border: 1px solid lime; */
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    display: flex;
+    font-weight: 400;
+    transition:all 0.5s ease 0s ;
+    opacity:0;
+    pointer-events: none;
+    z-index: 10;
+    color: #1f1e1e;
+}
+.gnb2dep>section{
+    flex: 1;
+    /* flex-basis: 0;
+    flex-shrink: 1;
+    flex-grow: 1; */
+    padding: 30px;
+}
+.gnb2dep>section:nth-of-type(2){
+    display: flex;
+}
+.gnb2dep>section:nth-of-type(2)>ul{
+    margin-left: 15px;
+    border-left: 1px solid rgb(255, 255, 255);
+    padding-left: 15px;
+}
+
+.banner{height:60vh;}
+.banner img{width:100%;height:100%;object-fit:cover;}
