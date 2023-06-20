@@ -16,7 +16,7 @@
     margin:50px 200px 100px;
 }
 .box3{
-    border: 1px solid brown;
+    border: 1px solid red
     /* margin-top: 50px;
     margin-right: 100px;
     margin-bottom: 150px;
@@ -47,9 +47,10 @@
     font-size: 5rem;
     border: 1px solid red;
     margin-left:100px ;
+    margin: 100px 200px;
     margin-right: 100px;
-    margin-top: 200px;
-    margin-bottom: 200px;
+    /* margin-top: 200px;
+    margin-bottom: 200px; */
     padding-left: 100px;
     padding-right: 100px;
 }
