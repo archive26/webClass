@@ -1,15 +1,26 @@
 $(document).ready(function(){
     
     let result =""
-    for(let i=1 ; i<=20 ; i++){
+    // for(let i=1 ; i<=20 ; i++){
+    //     result+=`<li>
+    //     <img class="small" src="./img/s${artwork[0].imgFileName}"  alt="${art work[0]}"> 
+    //     <img class="big" src="./img/pic${i}.jpg" alt="큰이미지${i}">
+    //     <h2 class="title">art work ${i}</h2>
+    //     <p>Artwork description comes here. <br>2023.06.20 </p>
+    //     <span class="btnClose">close</span>
+    // </li>`
+    // }
+    
+    for(let i=0 ; i<20 ; i++){
         result+=`<li>
-        <img class="small" src="./img/s${i}.jpg"  alt="작은이미지${i}"> 
-        <img class="big" src="./img/pic${i}.jpg" alt="큰이미지${i}">
-        <h2 class="title">art work ${i}</h2>
-        <p>Artwork description comes here. <br>2023.06.20 </p>
+        <img class="small" src="./img/${artwork[i].
+        imgFileName}"  alt="${artwork[i].title}"> 
+        <h2 class="title">${artwork[i].title}</h2>
+        <p>${artwork[i].description}</p>
         <span class="btnClose">close</span>
     </li>`
     }
+    
     $(".train").html(result)
 
     $(".stationMenu>li").click(function(){
@@ -24,9 +35,8 @@ $(document).ready(function(){
     })
 
     let count=0;
+    //변수가 만들어지는 공간도 중요
     $(".station").on("wheel DOMMouseScroll",function(event){
-    
-
         let E = event.originalEvent
         let delta = 0;
         if(E.detail){
@@ -56,14 +66,20 @@ $(document).ready(function(){
     $(".train>li").click(function(){
         $(".train>li").removeClass("on")
         $(this).addClass("on")
+
         let idx = $(this).index()
         count = idx //동기화시킴
         $(".train").css("transform","translateX("+(-200*idx)+"px)")
     })
+    //닫는버튼 기능
     $(".btnClose").click(function(){
         $(".train>li").removeClass("on")
-        return false //상위태그로 클릭이벤트가 전달되지않게(버블링되지않게)설정
+        return false //-> 상위태그로 클릭이벤트가 전달되지않게(버블링되지않게)설정
     })
 
+    //  버블링 -> 자식을 클릭해도 부모가 같이 클릭되는 현상
+    //  btnclose를 클릭하는 것은 list전체를 클릭하는 것과 동일하므로
+    //  list한테 준 이벤드도 동시에 일어나서 close버튼이 안 눌림 
+    //  -> return false을 적어줘서 버블링 현상을 방지
                    
 })

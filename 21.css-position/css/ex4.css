@@ -31,7 +31,7 @@ dl>dd{
     overflow: hidden;
     /* opacity: 0; */
     transition:all 0.5s ease 0s;
-    /* transirion은 중간수치가 명확할때만 전환스타일을 표시한다.(예 width:300px -> width:500px) */
+    /* transition은 중간수치가 명확할때만 전환스타일을 표시한다.(예 width:300px -> width:500px) */
 }
 
 dl>dt.on+dd{
