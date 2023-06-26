@@ -5,7 +5,7 @@ $(document).ready(function(){
     $(".btnNext").click(function(){
         count++;
         if(count>3){count = 0}
-        // $(".train").css("transform","translateX(-"+(count*25)+"%)")
+        $(".train").css("transform","translateX(-"+(count*25)+"%)")
         $(".train>li").removeClass("on")
         $(".train>li").eq(count).addClass("on")
         $(".pagination>li").removeClass("on")

@@ -20,7 +20,7 @@
     border-top: 10px dotted green;
     border-bottom:10px double fuchsia ;
     
-    border: 10px solid red;
+    /* border: 10px solid red; */
 
     padding-left: 30px;
     padding-right: 30px;
