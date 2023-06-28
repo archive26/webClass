@@ -53,3 +53,11 @@ ul,ol{list-style:none;}
     border: 1px solid red;
     padding: 20px;
 }
+.wrap{
+    height: 2000px;
+    background: blue;
+}
+.box{
+    height: 1000px;
+    background: green;
+}
