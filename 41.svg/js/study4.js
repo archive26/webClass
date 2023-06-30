@@ -6,7 +6,7 @@ $(document).ready(function(){
     // $(".letter").css("stroke-dashoffset",pathLength)
 
     $("#introtxt path").each(function(){
-        
+         
     })
 
 })
