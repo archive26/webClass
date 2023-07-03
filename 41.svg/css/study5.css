@@ -51,6 +51,14 @@
     0%{stroke-dashoffset: 0;}
     100%{stroke-dashoffset: 1000;}
 } */
+/* #progress circle{
+    fill:transparent;
+    stroke:black;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+    transition:all 1s ease 0s;
+} */
+
 .per{
     position:absolute;
     left:0;
