@@ -1,51 +1,50 @@
-*{margin:0;padding: 0;}
+*{margin:0;padding:0;}
 ul,ol{list-style:none;}
 
 .skill{
-    /* border: 1px solid red; */
-    width: 1200px;
+    
+    width:1200px;
     margin:0 auto;
-    display: flex;
+    display:flex;
 }
 .skill>li{
-    flex: 1;
-    /* border: 1px solid blue; */
-    margin-right:10px ;
+    
+    flex:1;
+    margin-right:10px;
 }
 .skill>li:last-of-type{
-    margin-right: 0;
+    margin-right:0;
 }
 .skill >li h2{
-    /* border: 1px solid blue; */
+   
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom:10px;
 }
 .skill >li p{
-    /* border: 1px solid red; */
+    
     text-align: center;
 }
-.skill>li>figure{
-    /* border: 1px solid green; */
-    position: relative;
+.skill > li >figure{
+   
+    position:relative;
 }
 .per{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: #fff;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
 }
-.skill>li svg{transform: rotate(-90deg);}
-.skill>li circle{
-    fill: #000;
-    stroke: aquamarine ;
+.skill > li svg{transform:rotate(-90deg);}
+.skill > li circle{
+    fill:none;
+    stroke:navy;
     stroke-dasharray: 314;
     stroke-dashoffset: 314;
-    /* transition: all 0.5s ease 0s; */
+    /* transition:all 0.5s ease 0s; */
 }
-/* .skill>li:hover circle{
+/* .skill > li:hover circle{
     stroke-dashoffset: 0;
 } */
 .per{
-    font-size: 30px;
+    font-size:30px;
 }
