@@ -1,20 +1,20 @@
-*{margin:0;padding: 0;}
-
+*{margin:0;padding:0;}
 
 .intro{
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height:100vh;
 }
-.intro>figure{
-    width: 1000px;
+.intro figure{
+    width:1600px;
 }
 #introtxt path{
-    transition: all 1s ease 0s;
-    fill:none;
-    stroke: rgb(0, 0, 0);
+    fill:transparent;
+    stroke:black;
+    /* transition:width 1s ease 0s,height 1s ease 1s; */
 }
 #introtxt.on path{
-    stroke-dashoffset: 0!important;
+    stroke-dashoffset:0!important;
+    fill:red;
 }
